@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 
 ## Install base packages
-sudo apt-get install -y cmatrix git wget curl htop nano gpg
+sudo apt-get install -y cmatrix git-all wget curl htop nano gpg zsh
 
 ## InstalL GCloud
 sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
@@ -32,7 +32,13 @@ code --install-extension vscode.json-language-features
 code --install-extension ecmel.vscode-html-css
 code --install-extension hashicorp.terraform
 code --install-extension golang.go
+code --install-extension christian-kohler.npm-intellisense
+code --install-extension leizongmin.node-module-intellisense
 
+
+## Install Node & NPM & Yarn
+sudo apt-get install -y nodejs npm
+sudo npm install --global yarn
 
 ## install Python
 sudo apt-get install -y python3 python3-pip
@@ -42,7 +48,7 @@ pip3 install virtualenv
 git config --global user.name "Rick G"
 git config --global user.email "a@b.com"
 mkdir ~/code
-echo -e "\n\n\n" ssh-keygen -b 4096
+echo -e "\n\n\n" | ssh-keygen -b 4096
 
 ## Configure Docker
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
