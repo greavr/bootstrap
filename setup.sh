@@ -26,9 +26,17 @@ terraform -install-autocomplete
 wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 sudo apt install -y ./code-latest.deb
 rm code-latest.deb
+code --install-extension googlecloudtools.cloudcode
+code --install-extension ms-python.vscode-pylance
+code --install-extension vscode.json-language-features
+code --install-extension ecmel.vscode-html-css
+code --install-extension hashicorp.terraform
+code --install-extension golang.go
+
 
 ## install Python
 sudo apt-get install -y python3 python3-pip
+pip3 install virtualenv
 
 ## Setup dev
 git config --global user.name "Rick G"
