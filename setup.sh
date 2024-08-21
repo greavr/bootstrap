@@ -13,7 +13,6 @@ sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 sudo apt-get update && sudo apt-get install -y google-cloud-cli kubectl google-cloud-cli-gke-gcloud-auth-plugin google-cloud-cli-kpt google-cloud-cli-skaffold
-echo "Dont forget to run gcloud init"
 
 ## Installing Terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
@@ -26,15 +25,7 @@ terraform -install-autocomplete
 wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 sudo apt install -y ./code-latest.deb
 rm code-latest.deb
-code --install-extension googlecloudtools.cloudcode
-code --install-extension ms-python.vscode-pylance
-code --install-extension vscode.json-language-features
-code --install-extension ecmel.vscode-html-css
-code --install-extension hashicorp.terraform
-code --install-extension golang.go
-code --install-extension christian-kohler.npm-intellisense
-code --install-extension leizongmin.node-module-intellisense
-
+for ext in googlecloudtools.cloudcode ms-python.vscode-pylance vscode.json-language-features ecmel.vscode-html-css hashicorp.terraform golang.go christian-kohler.npm-intellisense leizongmin.node-module-intellisense; do code --install-extension $ext; done
 
 ## Install Node & NPM & Yarn
 sudo apt-get install -y nodejs npm
@@ -73,3 +64,4 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 # Fin
 fortune | cowsay
+echo "####Dont forget to run gcloud init####"
