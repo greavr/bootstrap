@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 
 ## Install base packages
-sudo apt-get install -y cmatrix git-all wget curl htop nano gpg zsh
+sudo apt-get install -y cmatrix git-all wget curl htop nano gpg zsh cowsay fortune sl
 
 ## InstalL GCloud
 sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
@@ -69,3 +69,7 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 ## Install PodMon
 # sudo apt-get -y install podman
+
+
+# Fin
+fortune | cowsay
