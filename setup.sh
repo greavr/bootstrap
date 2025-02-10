@@ -32,8 +32,7 @@ sudo apt-get install -y nodejs npm
 sudo npm install --global yarn
 
 ## install Python
-sudo apt-get install -y python3 python3-pip
-pip3 install virtualenv
+sudo apt-get install -y python3 python3-pip python3-virtualenv
 
 ## Setup dev
 git config --global user.name "Rick G"
