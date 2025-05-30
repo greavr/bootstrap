@@ -23,7 +23,7 @@ terraform -install-autocomplete
 
 ## Install VSCode
 wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-sudo apt install -y ./code-latest.deb
+sudo DEBIAN_FRONTEND=noninteractive  apt install -y ./code-latest.deb
 rm code-latest.deb
 for ext in googlecloudtools.cloudcode ms-python.vscode-pylance vscode.json-language-features ecmel.vscode-html-css hashicorp.terraform golang.go christian-kohler.npm-intellisense leizongmin.node-module-intellisense; do code --install-extension $ext; done
 
