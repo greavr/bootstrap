@@ -6,7 +6,7 @@ sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 
 ## Install base packages
-sudo apt-get install -y cmatrix git-all wget curl htop nano gpg zsh cowsay fortune sl telnet
+sudo apt-get install --assume-yes -y cmatrix git-all wget curl htop nano gpg zsh cowsay fortune sl telnet tcpdump wireshark
 
 ## InstalL GCloud
 sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
