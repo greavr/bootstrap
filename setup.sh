@@ -34,6 +34,9 @@ sudo npm install --global yarn
 ## install Python
 sudo apt-get install -y python3 python3-pip python3-virtualenv
 
+## Install Go-Lang
+sudo apt-get -y install golang
+
 ## Setup dev
 git config --global user.name "Rick G"
 git config --global user.email "a@b.com"
