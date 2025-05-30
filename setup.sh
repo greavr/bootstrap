@@ -44,7 +44,7 @@ git config --global user.name "Rick G"
 git config --global user.email "a@b.com"
 git config --global init.defaultBranch main
 mkdir ~/code
-echo -e "\n\n\n" | ssh-keygen -b 4096
+echo -e "\n\n\n" | ssh-keygen -t ed25519 -a 100
 
 ## Configure Docker
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
