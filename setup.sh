@@ -34,7 +34,7 @@ sudo apt-get install -y nodejs npm
 sudo npm install --global yarn
 
 ## install Python
-sudo apt-get install -y python3 python3-pip python3-virtualenv
+sudo apt-get install -y python3-full python3-pip python3-virtualenv
 
 ## Install Go-Lang
 sudo apt-get -y install golang
